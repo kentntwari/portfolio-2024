@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 400;
+    src: url("/public/fonts/RethinkSans-Regular.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 600;
+    src: url("/public/fonts/RethinkSans-SemiBold.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 700;
+    src: url("/public/fonts/RethinkSans-Bold.ttf") format("ttf");
+  }
+
+  :root {
+    --color-site: 0deg 0% 0%;
+    --color-very-dark-maroon: 248deg 11% 27%;
+    --color-very-light-maroon: 248deg 11% 85%;
+    --color-ghost-light-maroon: 248deg 11% 42%;
+  }
+}
