@@ -26,5 +26,12 @@
     --color-very-dark-maroon: 248deg 11% 27%;
     --color-very-light-maroon: 248deg 11% 85%;
     --color-ghost-light-maroon: 248deg 11% 42%;
+    --color-light: 263deg 100% 98%;
+  }
+}
+
+@layer components {
+  .displayText {
+    @apply uppercase font-bold text-[5.5rem] leading-[4rem];
   }
 }

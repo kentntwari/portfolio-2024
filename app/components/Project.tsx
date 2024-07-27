@@ -4,7 +4,7 @@ import { cn } from "~/utils/cn";
 
 interface IProjectProps extends React.ComponentPropsWithoutRef<"img"> {
   path: string;
-  title: string;
+  name: string;
   tech: string[];
   year?: string;
 }
@@ -12,13 +12,13 @@ interface IProjectProps extends React.ComponentPropsWithoutRef<"img"> {
 export function Project({
   path,
   year = "2024",
-  title,
+  name,
   tech,
   className,
 }: IProjectProps) {
   return (
-    <article className="w-full space-y-2">
-      <div className="max-h-[373px] overflow-hidden">
+    <article key={name} className="w-full lg:w-fit space-y-2">
+      <div className="max-h-[17rem] lg:max-h-[672px] overflow-hidden">
         <IKImage
           path={path}
           transformation={[
@@ -30,15 +30,18 @@ export function Project({
           ]}
           loading="lazy"
           lqip={{ active: true, quality: 10, blur: 10 }}
-          className={cn("h-[373px] object-cover object-[55%]", className)}
+          className={cn(
+            "w-full h-[17rem] object-cover object-[50%]",
+            className
+          )}
         ></IKImage>
       </div>
 
-      <div className="px-5 w-full flex items-start justify-between font-semibold">
+      <div className="w-full max-w-[22.875rem] mx-auto flex items-start justify-between font-semibold">
         <span className="block">{year}</span>
-        <span className="block">{title}</span>
-        <div className="block max-w-40 text-right text-balance">
-          Tech used:{tech.join(", ")}
+        <span className="block">{name}</span>
+        <div className="block max-w-40 md:max-w-[266px] text-right text-balance">
+          Tech used: {tech.join(", ")}
         </div>
       </div>
     </article>

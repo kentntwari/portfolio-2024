@@ -3,6 +3,14 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "728px",
+      lg: "834px",
+      xl: "1024px",
+      "2xl": "1440px",
+      "3xl": "1536px",
+    },
     container: {
       center: true,
     },
@@ -77,6 +85,7 @@ export default {
       },
       colors: {
         site: "hsl(var(--color-site))",
+        light: "hsl(var(--color-light))",
         "very-dark-maroon": "hsl(var(--color-very-dark-maroon))",
         "very-light-maroon": "hsl(var(--color-very-light-maroon))",
         "ghost-light-maroon": "hsl(var(--color-ghost-light-maroon))",
