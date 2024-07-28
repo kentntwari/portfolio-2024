@@ -17,8 +17,8 @@ export function Project({
   className,
 }: IProjectProps) {
   return (
-    <article key={name} className="w-full lg:w-fit space-y-2">
-      <div className="max-h-[17rem] lg:max-h-[672px] overflow-hidden">
+    <article className="w-full xl:w-[56rem] 3xl:w-[64rem] lg:w-fit space-y-2">
+      <div className="max-h-[17rem] sm:max-h-[32rem] 3xl:max-h-[35.75rem] overflow-hidden">
         <IKImage
           path={path}
           transformation={[
@@ -28,19 +28,15 @@ export function Project({
               format: "webp",
             },
           ]}
-          loading="lazy"
           lqip={{ active: true, quality: 10, blur: 10 }}
-          className={cn(
-            "w-full h-[17rem] object-cover object-[50%]",
-            className
-          )}
+          className={cn("w-full object-cover object-[50%]", className)}
         ></IKImage>
       </div>
 
-      <div className="w-full max-w-[22.875rem] mx-auto flex items-start justify-between font-semibold">
+      <div className="w-full max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full mx-auto flex items-start justify-between font-medium">
         <span className="block">{year}</span>
         <span className="block">{name}</span>
-        <div className="block max-w-40 md:max-w-[266px] text-right text-balance">
+        <div className="block max-w-40 sm:max-w-[13.25rem] lg:max-w-[16.625rem] 3xl:max-w-full text-right text-balance">
           Tech used: {tech.join(", ")}
         </div>
       </div>

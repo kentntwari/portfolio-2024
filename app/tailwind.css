@@ -11,6 +11,12 @@
 
   @font-face {
     font-family: "Rethink Sans";
+    font-weight: 500;
+    src: url("/public/fonts/RethinkSans-Medium.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
     font-weight: 600;
     src: url("/public/fonts/RethinkSans-SemiBold.ttf") format("ttf");
   }
@@ -32,6 +38,6 @@
 
 @layer components {
   .displayText {
-    @apply uppercase font-bold text-[5.5rem] leading-[4rem];
+    @apply uppercase font-bold text-[5.5rem] sm:text-[6.625rem] lg:text-[7.5rem] xl:text-[9.75rem] 4xl:text-[11rem] leading-[4rem] sm:leading-[4.75rem] lg:leading-[7rem] 4xl:leading-[7.75rem];
   }
 }

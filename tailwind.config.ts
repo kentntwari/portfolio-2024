@@ -8,8 +8,9 @@ export default {
       md: "728px",
       lg: "834px",
       xl: "1024px",
-      "2xl": "1440px",
-      "3xl": "1536px",
+      "2xl": "1280px",
+      "3xl": "1440px",
+      "4xl": "1536px",
     },
     container: {
       center: true,
@@ -51,14 +52,14 @@ export default {
           "1.25rem",
           {
             lineHeight: "1.875rem",
-            fontWeight: 700,
+            fontWeight: 500,
           },
         ],
         lg: [
           "1.125rem",
           {
             lineHeight: "1.75rem",
-            fontWeight: 700,
+            fontWeight: 500,
           },
         ],
         base: [
