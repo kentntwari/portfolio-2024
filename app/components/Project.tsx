@@ -17,8 +17,8 @@ export function Project({
   className,
 }: IProjectProps) {
   return (
-    <article className="w-full xl:w-[56rem] 3xl:w-[64rem] lg:w-fit space-y-2">
-      <div className="max-h-[17rem] sm:max-h-[32rem] 3xl:max-h-[35.75rem] overflow-hidden">
+    <article className="w-full lg:w-fit space-y-2">
+      <div className="max-h-[17rem] sm:max-h-[32rem] xl:max-h-[35.75rem] overflow-hidden">
         <IKImage
           path={path}
           transformation={[
@@ -33,10 +33,10 @@ export function Project({
         ></IKImage>
       </div>
 
-      <div className="w-full max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full mx-auto flex items-start justify-between font-medium">
+      <div className="description sm:px-5 md:px-0 flex items-start justify-between">
         <span className="block">{year}</span>
-        <span className="block">{name}</span>
-        <div className="block max-w-40 sm:max-w-[13.25rem] lg:max-w-[16.625rem] 3xl:max-w-full text-right text-balance">
+        <span className="block max-w-[3.75rem]">{name}</span>
+        <div className="block max-w-[10.75rem] sm:max-w-[13.25rem] md:max-w-64 text-right text-balance">
           Tech used: {tech.join(", ")}
         </div>
       </div>

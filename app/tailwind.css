@@ -38,6 +38,47 @@
 
 @layer components {
   .displayText {
-    @apply uppercase font-bold text-[5.5rem] sm:text-[6.625rem] lg:text-[7.5rem] xl:text-[9.75rem] 4xl:text-[11rem] leading-[4rem] sm:leading-[4.75rem] lg:leading-[7rem] 4xl:leading-[7.75rem];
+    @apply uppercase font-medium text-[5.5rem] sm:text-[6.625rem] md:text-[8.25rem] lg:text-[9.75rem] 2xl:text-[11rem] leading-[4rem] sm:leading-[4.75rem] md:leading-[6rem] lg:leading-[7rem] 2xl:leading-[7.75rem] -tracking-[2.5px];
+  }
+}
+
+@layer utilities {
+  :is(#past-design, #projects) .description,
+  section:not(#past-design, #projects) {
+    width: 100%;
+    max-width: 22.875rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 640px) {
+    :is(#past-design, #projects) .description,
+    section:not(#past-design, #projects) {
+      max-width: 640px;
+    }
+  }
+  @media screen and (min-width: 834px) {
+    :is(#past-design, #projects) .description,
+    section:not(#past-design, #projects) {
+      max-width: 834px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    :is(#past-design, #projects) .description,
+    section:not(#past-design, #projects) {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    :is(#past-design, #projects) .description,
+    section:not(#past-design, #projects) {
+      max-width: 1440px;
+    }
+  }
+  @media screen and (min-width: 1728px) {
+    :is(#past-design, #projects) .description,
+    section:not(#past-design, #projects) {
+      max-width: 1728px;
+    }
   }
 }

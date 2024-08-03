@@ -16,8 +16,8 @@ export default function Index() {
   return (
     <>
       <IKContext urlEndpoint="https://ik.imagekit.io/2rtor9l9w">
-        <header className="mt-[5.5rem] lg:mt-24 max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full m-auto w-full grid grid-cols-4 3xl:grid-cols-12 gap-x-5">
-          <span className="block relative sm:top-1.5 4xl:top-0.5 4xl:-right-6 -z-10 -ml-[2.7rem] sm:ml-0 row-start-1 row-end-1 col-start-2 sm:col-start-3 3xl:col-start-7 col-end-[-1] sm:col-end-5 2xl:col-end-4 3xl:col-end-10 bg-[#FFD5D2] w-[173px] lg:w-[187px] h-24 lg:h-[110px] 3xl:h-[120px] sm:justify-self-end 2xl:justify-self-start 3xl:justify-self-end">
+        <header className="m-auto sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] w-full max-w-[22.875rem] sm:container grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-5">
+          <span className="block relative sm:top-1.5 md:top-5 xl:top-6 2xl:top-9 sm:left-24 md:-left-11 lg:left-2 xl:left-8 2xl:left-20 -z-10 sm:z-10 -ml-[2.7rem] sm:ml-0 row-start-1 sm:row-start-2 xl:row-start-1 row-end-1 sm:row-end-auto col-start-2 sm:col-start-1 md:col-start-4 xl:col-start-8 col-end-[-1]  bg-[#FFD5D2] w-[173px] md:w-[187px] h-24 md:h-[120px]">
             <IKImage
               path="portfolio/closeup-2.png"
               transformation={[
@@ -28,84 +28,79 @@ export default function Index() {
               ]}
               loading="lazy"
               lqip={{ active: true, quality: 10, blur: 10 }}
-              className="absolute w-[124px] lg:w-[144px] 4xl:w-[164px] bottom-0 left-5"
+              className="absolute w-[124px] md:w-[164px] bottom-0 left-5 md:left-0"
             />
           </span>
-          <div className="-mt-8 sm:mt-0 col-span-4 sm:row-start-1 sm:col-start-1 displayText sm:self-end">
+          <div className="-mt-8 sm:mt-0 md:ml-[3.125rem] lg:ml-0 col-span-4 lg:col-start-1 displayText sm:self-end">
             front
           </div>
-          <div className="mt-3 sm:mt-6 lg:mt-5 xl:mt-8 2xl:mt-0 -ml-6 sm:ml-4 lg:-ml-5 col-start-3 3xl:col-start-10 2xl:col-end-5 3xl:col-end-13 2xl:row-start-1 displayText justify-end 2xl:justify-self-end 2xl:self-end">
+          <div className="mt-3 sm:mt-6 md:mt-12 lg:mt-8 -ml-6 sm:-ml-9 md:-ml-11 lg:-ml-7 xl:ml-0 col-start-3 md:col-start-6 lg:col-start-7 xl:col-start-10 xl:col-end-13 sm:row-start-2 xl:row-start-1 displayText justify-end xl:justify-self-end">
             end
           </div>
           <div className="block sm:hidden max-w-[22rem] mt-3 col-span-4 displayText text-end">
             Develo
             <br /> per
           </div>
-          <div className="hidden sm:block sm:mt-6 lg:mt-5 xl:mt-8 max-w-[22rem] sm:max-w-full mt-3 col-span-4 3xl:col-span-3 3xl:col-start-3 displayText text-end 3xl:text-start">
+          <div className="hidden sm:block max-w-[22rem] sm:max-w-fit mt-3 sm:mt-6 md:mt-12 lg:mt-8 2xl:mt-10 col-span-4 md:col-start-auto xl:col-start-3 lg:col-span-12 xl:col-span-9 md:row-start-3 displayText justify-self-end md:justify-self-start lg:justify-self-end xl:justify-self-start">
             Developer
           </div>
-          <div className="w-[20.5rem] lg:w-[27.875rem] xl:w-[39.625rem] mt-16 sm:mt-24 lg:mt-[7.5rem] xl:mt-[15rem] 3xl:row-start-3 flex justify-between items-start *:block *:max-w-[9.25rem] lg:*:max-w-[10.875rem] xl:*:max-w-[16.5rem] text-balance">
+          <div className="w-[20.5rem] md:w-[446px] lg:w-[634px] mt-14 sm:mt-[7.5rem] xl:mt-48 md:row-start-4 flex justify-between items-start *:block *:max-w-[9.25rem] md:*:max-w-[12.25rem] lg:*:max-w-[16.5rem] text-balance">
             <div>
-              I specialize in Typescript/ <br />
-              Javascript to build beautiful user interfaces that convert
+              I specialize in Typescript/ Javascript to build beautiful user
+              interfaces that convert
             </div>
             <span>
               I’m currently looking for a position where my skills can add value
               to the business
             </span>
           </div>
-          <span className="hidden sm:block mt-[4.375rem] sm:mt-24 lg:mt-[7.5rem] xl:mt-[15rem] col-start-1 sm:col-start-4 3xl:col-start-12 sm:row-start-4 2xl:row-start-3 uppercase sm:text-end">
+          <span className="mt-[4.375rem] sm:mt-[7.5rem] xl:mt-48 col-start-1 sm:col-start-4 md:col-start-8 lg:col-start-12 sm:col-end-5 md:col-end-9 lg:col-end-13 sm:row-start-4 sm:justify-self-end uppercase">
             (scroll)
           </span>
         </header>
         <section
           id="experience"
-          className="max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full mx-auto mt-40 sm:mt-56 xl:mt-60"
+          className="mt-60 sm:mt-80 md:mt-[22.5rem] xl:mt-[30rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] grid grid-cols-1 lg:grid-cols-12 lg:gap-x-5"
         >
-          <div className="flex items-start justify-between w-full">
-            <div className="hidden xl:block w-6 h-6 bg-light"></div>
-            <h2 className="xl:relative xl:-top-4 w-full xl:max-w-[42.5rem] 3xl:max-w-[63.5rem] text-3xl sm:text-4xl 3xl:text-5xl text-balance">
-              With 3+ years of experience,
-              <br /> I have worked on complex projects with multiple
-              requirements ranging from designing the user interface to coding
-              the full project
-            </h2>
-          </div>
+          <div className="hidden lg:block lg:col-start-1 w-6 h-6 bg-light"></div>
+          <h2 className="lg:relative lg:-top-2 lg:max-w-[42.5rem] xl:max-w-[64rem] lg:col-span-10 lg:col-start-3 2xl:col-start-4 lg:justify-self-end 2xl:justify-self-start font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
+            With 3+ years of experience,
+            <br /> I have worked on complex projects with multiple requirements
+            ranging from designing the user interface to coding the full project{" "}
+          </h2>
         </section>
         <section
           id="past-design"
-          className="mt-28 sm:mt-36 lg:mt-40 xl:mt-60 space-y-2"
+          className="mt-32 sm:mt-60 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] flex xl:grid flex-col xl:grid-cols-12 gap-2 xl:gap-5"
         >
-          <span className="block max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full m-auto">
+          <span className="block description sm:px-5 xl:col-start-1 xl:col-span-3 xl:max-w-[17.75rem]">
             My most recent work experience included the design with Figma of the
             customer portal of Easy Advance, a brand of the canadian microloan
-            fintech firm FINSANA
+            fintech firm Finsana
           </span>
-          <div className="relative w-full lg:max-w-full h-[17rem] sm:h-[26.688rem] bg-[url(/img/gradient-bg-1.jpg)] bg-no-repeat overflow-hidden">
-            <span className="block absolute -top-[12.5rem] sm:-top-[5rem] left-20 sm:left-72 3xl:left-auto 3xl:right-52 scale-[74%] sm:scale-100 -rotate-[15deg]">
-              <NDASnapshot />
-            </span>
-          </div>
-          <div className="w-full max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full m-auto flex justify-between items-start > *:block">
-            <span>2023</span>
-            <span>Finsana</span>
-            <span className="max-w-[10.875rem] sm:max-w-[13.25rem] lg:max-w-[16.625rem] 3xl:max-w-full text-end text-balance">
-              Tech used: Nuxt, Vue, Typeorm, MySQL, Microservices
+          <div className="xl:col-start-4 xl:col-span-9 w-full flex flex-col gap-2">
+            <div className="relative w-full h-[17rem] sm:h-[427px] bg-[url(/img/gradient-bg-1.jpg)] bg-no-repeat overflow-hidden">
+              <span className="block absolute -top-[12.5rem] sm:-top-20 left-auto -right-20 sm:right-0 lg:right-32 scale-[74%] sm:scale-100 -rotate-[15deg]">
+                <NDASnapshot />
+              </span>
+            </div>
+            <span className="sm:px-5 md:px-0 flex description justify-between items-center *:text-base sm:*:text-lg">
+              <small>2023</small>
+              <small className="max-w-64 text-end text-balance">
+                Designed with Figma
+              </small>
             </span>
           </div>
         </section>
         <section
           id="projects"
-          className="mt-28 sm:mt-36 lg:mt-40 xl:mt-60 lg:max-w-full space-y-10 sm:space-y-14 xl:space-y-20"
+          className="mt-40 sm:mt-60 md:mt-[22.5rem] xl:mt-[30rem] md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] grid grid-cols-1 lg:grid-cols-12 gap-14 sm:gap-y-20 lg:gap-x-5"
         >
-          <div className="flex items-start justify-between w-full">
-            <div className="hidden xl:block w-6 h-6 bg-light"></div>
-            <h2 className="xl:relative xl:-top-4 w-full m-auto xl:m-0 max-w-[22.875rem] sm:max-w-[37.5rem] xl:max-w-[42.5rem] 3xl:max-w-[63.5rem] text-3xl sm:text-4xl 3xl:text-5xl text-balance">
-              Some of my open source projects
-            </h2>
-          </div>
-
-          <div className="space-y-16 sm:space-y-20 2xl:flex 2xl:flex-col 2xl:items-end">
+          <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
+          <h2 className="lg:relative lg:-top-2 m-auto md:m-0 max-w-[22.875rem] lg:max-w-[42.5rem] xl:max-w-[64rem] sm:container md:w-full sm:px-5 md:px-0 col-start-1 lg:col-start-4 xl:col-start-3 2xl:col-start-4 lg:col-span-9 xl:col-span-10 xl:justify-self-end 2xl:justify-self-start font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
+            Some of my open source projects
+          </h2>
+          <div className="space-y-20 lg:col-span-12 xl:col-start-4 xl:col-span-9 xl:justify-self-end">
             <Project
               name="Journey"
               year="2024"
@@ -118,23 +113,9 @@ export default function Index() {
                 "Prisma ORM",
                 "Supabase",
               ]}
+              className="lg:relative lg:-top-5 2xl:-top-10"
             />
 
-            <Project
-              name="Boss Lady Digital"
-              year="2024"
-              path="/portfolio/project-bossladydigital.png"
-              tech={[
-                "Nuxt",
-                "Vue",
-                "Trpc",
-                "Typescript",
-                "Kinde Auth",
-                "Prisma ORM",
-                "Supabase",
-              ]}
-              className="xl:relative xl:-top-20"
-            />
             <Project
               name="Kanban"
               year="2024"
@@ -147,26 +128,32 @@ export default function Index() {
                 "Prisma ORM",
                 "Neon DB",
               ]}
-              className="scale-150 xl:scale-125 xl:relative xl:-top-20 2xl:-top-32"
+              className="scale-150 md:scale-125 lg:relative lg:-top-20 2xl:-top-32"
             />
           </div>
         </section>
         <section
-          id="contact"
-          className="max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-full mx-auto mt-40 sm:mt-56 xl:mt-60 space-y-24 sm:space-y-36 lg:space-y-120"
+          id="pitch"
+          className="mt-60 sm:mt-80 md:mt-[22.5rem] xl:mt-[30rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] lg:grid lg:grid-cols-12 lg:gap-x-5"
         >
-          <div className="flex items-start justify-between w-full">
-            <div className="hidden xl:block w-6 h-6 bg-light"></div>
-            <h2 className="xl:relative xl:-top-4 w-full xl:max-w-[42.5rem] 3xl:max-w-[63.5rem] text-3xl sm:text-4xl 3xl:text-5xl text-balance">
-              The tech space is so wide and there’s always something better to
-              make and novel to discover. I would love to have a conversation
-              and see how we can make it work
+          <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
+          <h2 className="lg:relative lg:-top-2 lg:max-w-[42.5rem] xl:max-w-[64rem] lg:col-span-10 lg:col-start-3 lg:justify-self-end font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
+            The tech space is so wide and there’s always something better to
+            make and novel to discover. I would love to have a conversation and
+            see how we can make it work
+          </h2>
+        </section>
+        <section
+          id="contact"
+          className="mt-60 xl:mt-[22.5rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] flex flex-col gap-32"
+        >
+          <div className="flex flex-col xl:flex-row lg:items-end xl:justify-between gap-6">
+            <h2 className="font-medium displayText text-balance">
+              <span className="block sm:hidden">Let's</span>
+              <span className="block sm:hidden mt-2">Talk</span>
+              <span className="hidden sm:block lg:text-end">Let's talk</span>
             </h2>
-          </div>
-
-          <div className="space-y-6 xl:space-y-0 xl:flex xl:flex-col 3xl:flex-row xl:items-end xl:justify-between xl:gap-10">
-            <div className="displayText">Let's talk</div>
-            <div className="px-2 py-1 w-[17.5rem] sm:w-[23rem] min-h-16 bg-light/10 flex items-center text-2xl sm:text-3xl text-center rounded-full">
+            <div className="px-2 py-1 w-[17.5rem] sm:w-[23rem] min-h-16 bg-light/10 flex justify-center items-center font-normal text-2xl sm:text-3xl text-center rounded-full">
               ntwarikent@gmail.com
             </div>
           </div>

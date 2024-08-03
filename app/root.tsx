@@ -19,9 +19,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="py-8 bg-site font-body text-base sm:text-lg lg:text-xl text-light">
-        <div className="min-h-[100dvh] min-h-screen flex flex-col">
-          <nav className="max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-[47.125rem] xl:max-w-[56rem] 2xl:max-w-[70rem] 3xl:max-w-[80rem] 4xl:max-w-[93rem] m-auto w-full flex items-center justify-between">
+      <body className="py-8 bg-site font-body font-normal text-base sm:text-lg text-light">
+        <div className="w-full m-auto min-h-[100dvh] min-h-screen flex flex-col">
+          <nav className="w-full max-w-[22.875rem] sm:container sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] m-auto flex items-start justify-between">
             <span>Kent Ntwari</span>
             <div className="flex items-center gap-6">
               <Link to="#contact" className="flex items-center gap-6">
@@ -32,21 +32,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
           </nav>
-          <main className="flex-1 lg:max-w-[47.125rem] xl:max-w-[56rem] 2xl:max-w-[70rem] 3xl:max-w-[80rem] 4xl:max-w-[93rem] lg:m-auto">
-            {children}
-          </main>
+          <main className="md:container flex-1 mt-24">{children}</main>
+          <footer className="mt-36 sm:mt-60 mx-auto sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] w-full max-w-[22.875rem] sm:container sm:flex sm:flex-row-reverse sm:items-center sm:justify-between space-y-6 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-20">
+              <Link to="https://www.linkedin.com/in/kentntwari/">Linkedin</Link>
+              <Link to="https://github.com/kentntwari">Github</Link>
+            </div>
+            <span className="flex items-center gap-2">
+              <Copyright className="w-5" />
+              Kent Ntwari. 2024
+            </span>
+          </footer>
         </div>
 
-        <footer className="max-w-[22.875rem] sm:max-w-[37.5rem] lg:max-w-[47.125rem] xl:max-w-[56rem] 2xl:max-w-[70rem] 3xl:max-w-[80rem] 4xl:max-w-[93rem] mx-auto mt-24 sm:mt-36 xl:mt-40 flex flex-col sm:flex-row-reverse sm:justify-between gap-6">
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-20">
-            <Link to="https://www.linkedin.com/in/kentntwari/">Linkedin</Link>
-            <Link to="https://github.com/kentntwari">Github</Link>
-          </div>
-          <span className="flex items-center gap-2">
-            <Copyright className="w-5" />
-            Kent Ntwari. 2024
-          </span>
-        </footer>
         <ScrollRestoration />
         <Scripts />
       </body>
