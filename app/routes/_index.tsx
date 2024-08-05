@@ -1,8 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
 
+import { Copy } from "lucide-react";
 import { IKContext, IKImage } from "imagekitio-react";
+import { useCopyToClipboard } from "@uidotdev/usehooks";
 
 import React, { useRef } from "react";
+
+import { Link } from "@remix-run/react";
 
 import { Project } from "~/components/Project";
 import { NDASnapshot } from "~/components/NDASnapshot";
@@ -10,8 +14,12 @@ import * as Animate from "~/components/Animate";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Kent Ntwari's Portfolio" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Kent Ntwari Portfolio" },
+    {
+      name: "description",
+      content:
+        "Hi, My name is Kent and I am a front-end web developer based in Montreal, Canada.",
+    },
   ];
 };
 
@@ -23,6 +31,9 @@ export default function Index() {
   const headerRef = useRef(null);
   const pastDesignRef = useRef(null);
 
+  const [, copyToClipboard] = useCopyToClipboard();
+
+  // TODO: Work on animations
   return (
     <Animate.FadeInOut
       targetRefs={[experienceRef, headerRef, pitchRef, contactRef]}
@@ -131,35 +142,38 @@ export default function Index() {
               Some of my open source projects
             </h2>
             <div className="space-y-20 lg:col-span-12 xl:col-start-4 xl:col-span-9 xl:justify-self-end">
-              <Project
-                name="Journey"
-                year="2024"
-                path="/portfolio/project-journey.png"
-                tech={[
-                  "Remix",
-                  "React",
-                  "Typescript",
-                  "Kinde Auth",
-                  "Prisma ORM",
-                  "Supabase",
-                ]}
-                className="lg:relative lg:-top-5 2xl:-top-10"
-              />
-
-              <Project
-                name="Kanban"
-                year="2024"
-                path="/portfolio/project-kanban.png"
-                tech={[
-                  "Nuxt",
-                  "Vue",
-                  "Typescript",
-                  "Kinde Auth",
-                  "Prisma ORM",
-                  "Neon DB",
-                ]}
-                className="scale-150 md:scale-125 lg:relative lg:-top-20 2xl:-top-32"
-              />
+              <Link to="https://journey-rouge-xi.vercel.app/">
+                <Project
+                  name="Journey"
+                  year="2024"
+                  path="/portfolio/project-journey.png"
+                  tech={[
+                    "Remix",
+                    "React",
+                    "Typescript",
+                    "Kinde Auth",
+                    "Prisma ORM",
+                    "Supabase",
+                  ]}
+                  className="lg:relative lg:-top-5 2xl:-top-10 first:cursor-visit"
+                />
+              </Link>
+              <Link to="https://kanban-task-manager-taupe.vercel.app">
+                <Project
+                  name="Kanban"
+                  year="2024"
+                  path="/portfolio/project-kanban.png"
+                  tech={[
+                    "Nuxt",
+                    "Vue",
+                    "Typescript",
+                    "Kinde Auth",
+                    "Prisma ORM",
+                    "Neon DB",
+                  ]}
+                  className="scale-150 md:scale-125 lg:relative lg:-top-20 2xl:-top-32 first:cursor-visit"
+                />
+              </Link>
             </div>
           </section>
         </Animate.FadeInOut>
@@ -187,8 +201,15 @@ export default function Index() {
               <span className="block sm:hidden mt-2">Talk</span>
               <span className="hidden sm:block lg:text-end">Let's talk</span>
             </h2>
-            <div className="px-2 py-1 w-[17.5rem] sm:w-[23rem] min-h-16 bg-light/10 flex justify-center items-center font-normal text-2xl sm:text-3xl text-center rounded-full">
-              ntwarikent@gmail.com
+            <div className="px-2 py-1 w-[20rem] sm:w-[26rem] min-h-16 bg-light/10 flex justify-center items-center gap-5 font-normal text-2xl sm:text-3xl text-center rounded-full">
+              <span>ntwarikent@gmail.com</span>
+              <button
+                type="button"
+                aria-label="copy email"
+                onClick={() => copyToClipboard("ntwarikent@gmail.com")}
+              >
+                <Copy className="w-6" />
+              </button>
             </div>
           </div>
         </section>
