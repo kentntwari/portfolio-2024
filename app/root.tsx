@@ -1,5 +1,7 @@
 import { Github, Copyright } from "lucide-react";
 
+import { useEffect } from "react";
+
 import {
   Link,
   Links,
@@ -11,6 +13,14 @@ import {
 import "./tailwind.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
     <html lang="en">
       <head>

@@ -2,8 +2,11 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { IKContext, IKImage } from "imagekitio-react";
 
+import React, { useRef } from "react";
+
 import { Project } from "~/components/Project";
 import { NDASnapshot } from "~/components/NDASnapshot";
+import * as Animate from "~/components/Animate";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,10 +16,22 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const experienceRef = useRef(null);
+  const pitchRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const headerRef = useRef(null);
+  const pastDesignRef = useRef(null);
+
   return (
-    <>
+    <Animate.FadeInOut
+      targetRefs={[experienceRef, headerRef, pitchRef, contactRef]}
+    >
       <IKContext urlEndpoint="https://ik.imagekit.io/2rtor9l9w">
-        <header className="m-auto sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] w-full max-w-[22.875rem] sm:container grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-5">
+        <header
+          ref={headerRef}
+          className="m-auto sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] w-full max-w-[22.875rem] sm:container grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-5"
+        >
           <span className="block relative sm:top-1.5 md:top-5 xl:top-6 2xl:top-9 sm:left-24 md:-left-11 lg:left-2 xl:left-8 2xl:left-20 -z-10 sm:z-10 -ml-[2.7rem] sm:ml-0 row-start-1 sm:row-start-2 xl:row-start-1 row-end-1 sm:row-end-auto col-start-2 sm:col-start-1 md:col-start-4 xl:col-start-8 col-end-[-1]  bg-[#FFD5D2] w-[173px] md:w-[187px] h-24 md:h-[120px]">
             <IKImage
               path="portfolio/closeup-2.png"
@@ -59,6 +74,7 @@ export default function Index() {
           </span>
         </header>
         <section
+          ref={experienceRef}
           id="experience"
           className="mt-60 sm:mt-80 md:mt-[22.5rem] xl:mt-[30rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] grid grid-cols-1 lg:grid-cols-12 lg:gap-x-5"
         >
@@ -69,71 +85,88 @@ export default function Index() {
             ranging from designing the user interface to coding the full project{" "}
           </h2>
         </section>
-        <section
-          id="past-design"
-          className="mt-32 sm:mt-60 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] flex xl:grid flex-col xl:grid-cols-12 gap-2 xl:gap-5"
+        <Animate.FadeInOut
+          targetRefs={[pastDesignRef]}
+          offset={["start start", "end start"]}
+          opacity={[1, 1, 1, 0]}
         >
-          <span className="block description sm:px-5 xl:col-start-1 xl:col-span-3 xl:max-w-[17.75rem]">
-            My most recent work experience included the design with Figma of the
-            customer portal of Easy Advance, a brand of the canadian microloan
-            fintech firm Finsana
-          </span>
-          <div className="xl:col-start-4 xl:col-span-9 w-full flex flex-col gap-2">
-            <div className="relative w-full h-[17rem] sm:h-[427px] bg-[url(/img/gradient-bg-1.jpg)] bg-no-repeat overflow-hidden">
-              <span className="block absolute -top-[12.5rem] sm:-top-20 left-auto -right-20 sm:right-0 lg:right-32 scale-[74%] sm:scale-100 -rotate-[15deg]">
-                <NDASnapshot />
+          <section
+            id="past-design"
+            ref={pastDesignRef}
+            className="mt-32 sm:mt-60 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] flex xl:grid flex-col xl:grid-cols-12 gap-2 xl:gap-5"
+          >
+            <span className="block description sm:px-5 xl:col-start-1 xl:col-span-3 xl:max-w-[17.75rem]">
+              My most recent work experience included the design with Figma of
+              the customer portal of Easy Advance, a brand of the canadian
+              microloan fintech firm Finsana
+            </span>
+            <div className="xl:col-start-4 xl:col-span-9 w-full flex flex-col gap-2">
+              <div className="relative w-full h-[17rem] sm:h-[427px] bg-[url(/img/gradient-bg-1.jpg)] bg-no-repeat overflow-hidden">
+                <span className="block absolute -top-[12.5rem] sm:-top-20 left-auto -right-20 sm:right-0 lg:right-32 scale-[74%] sm:scale-100 -rotate-[15deg]">
+                  <NDASnapshot />
+                </span>
+              </div>
+              <span className="sm:px-5 md:px-0 flex description justify-between items-center *:text-base sm:*:text-lg">
+                <small>2023</small>
+                <small className="max-w-64 text-end text-balance">
+                  Designed with Figma
+                </small>
               </span>
             </div>
-            <span className="sm:px-5 md:px-0 flex description justify-between items-center *:text-base sm:*:text-lg">
-              <small>2023</small>
-              <small className="max-w-64 text-end text-balance">
-                Designed with Figma
-              </small>
-            </span>
-          </div>
-        </section>
-        <section
-          id="projects"
-          className="mt-40 sm:mt-60 md:mt-[22.5rem] xl:mt-[30rem] md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] grid grid-cols-1 lg:grid-cols-12 gap-14 sm:gap-y-20 lg:gap-x-5"
-        >
-          <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
-          <h2 className="lg:relative lg:-top-2 m-auto md:m-0 max-w-[22.875rem] lg:max-w-[42.5rem] xl:max-w-[64rem] sm:container md:w-full sm:px-5 md:px-0 col-start-1 lg:col-start-4 xl:col-start-3 2xl:col-start-4 lg:col-span-9 xl:col-span-10 xl:justify-self-end 2xl:justify-self-start font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
-            Some of my open source projects
-          </h2>
-          <div className="space-y-20 lg:col-span-12 xl:col-start-4 xl:col-span-9 xl:justify-self-end">
-            <Project
-              name="Journey"
-              year="2024"
-              path="/portfolio/project-journey.png"
-              tech={[
-                "Remix",
-                "React",
-                "Typescript",
-                "Kinde Auth",
-                "Prisma ORM",
-                "Supabase",
-              ]}
-              className="lg:relative lg:-top-5 2xl:-top-10"
-            />
+          </section>
+        </Animate.FadeInOut>
 
-            <Project
-              name="Kanban"
-              year="2024"
-              path="/portfolio/project-kanban.png"
-              tech={[
-                "Nuxt",
-                "Vue",
-                "Typescript",
-                "Kinde Auth",
-                "Prisma ORM",
-                "Neon DB",
-              ]}
-              className="scale-150 md:scale-125 lg:relative lg:-top-20 2xl:-top-32"
-            />
-          </div>
-        </section>
+        <Animate.FadeInOut
+          targetRefs={[projectsRef]}
+          offset={["start end", "end start"]}
+          opacity={[0, 1, 1, 0.5]}
+        >
+          <section
+            id="projects"
+            ref={projectsRef}
+            className="mt-40 sm:mt-60 md:mt-[22.5rem] xl:mt-[30rem] md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] grid grid-cols-1 lg:grid-cols-12 gap-14 sm:gap-y-20 lg:gap-x-5"
+          >
+            <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
+            <h2 className="lg:relative lg:-top-2 m-auto md:m-0 max-w-[22.875rem] lg:max-w-[42.5rem] xl:max-w-[64rem] sm:container md:w-full sm:px-5 md:px-0 col-start-1 lg:col-start-4 xl:col-start-3 2xl:col-start-4 lg:col-span-9 xl:col-span-10 xl:justify-self-end 2xl:justify-self-start font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
+              Some of my open source projects
+            </h2>
+            <div className="space-y-20 lg:col-span-12 xl:col-start-4 xl:col-span-9 xl:justify-self-end">
+              <Project
+                name="Journey"
+                year="2024"
+                path="/portfolio/project-journey.png"
+                tech={[
+                  "Remix",
+                  "React",
+                  "Typescript",
+                  "Kinde Auth",
+                  "Prisma ORM",
+                  "Supabase",
+                ]}
+                className="lg:relative lg:-top-5 2xl:-top-10"
+              />
+
+              <Project
+                name="Kanban"
+                year="2024"
+                path="/portfolio/project-kanban.png"
+                tech={[
+                  "Nuxt",
+                  "Vue",
+                  "Typescript",
+                  "Kinde Auth",
+                  "Prisma ORM",
+                  "Neon DB",
+                ]}
+                className="scale-150 md:scale-125 lg:relative lg:-top-20 2xl:-top-32"
+              />
+            </div>
+          </section>
+        </Animate.FadeInOut>
+
         <section
           id="pitch"
+          ref={pitchRef}
           className="mt-60 sm:mt-80 md:mt-[22.5rem] xl:mt-[30rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] lg:grid lg:grid-cols-12 lg:gap-x-5"
         >
           <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
@@ -145,6 +178,7 @@ export default function Index() {
         </section>
         <section
           id="contact"
+          ref={contactRef}
           className="mt-60 xl:mt-[22.5rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] flex flex-col gap-32"
         >
           <div className="flex flex-col xl:flex-row lg:items-end xl:justify-between gap-6">
@@ -159,6 +193,6 @@ export default function Index() {
           </div>
         </section>
       </IKContext>
-    </>
+    </Animate.FadeInOut>
   );
 }
