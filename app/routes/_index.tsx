@@ -184,7 +184,7 @@ export default function Index() {
           className="mt-60 sm:mt-80 md:mt-[22.5rem] xl:mt-[30rem] sm:px-5 md:px-10 lg:px-16 xl:px-20 2xl:px-[7.5rem] lg:grid lg:grid-cols-12 lg:gap-x-5"
         >
           <div className="hidden lg:block w-6 h-6 bg-light col-start-1"></div>
-          <h2 className="lg:relative lg:-top-2 lg:max-w-[42.5rem] xl:max-w-[64rem] lg:col-span-10 lg:col-start-3 lg:justify-self-end font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
+          <h2 className="lg:relative lg:-top-2 lg:max-w-[42.5rem] xl:max-w-[64rem] lg:col-span-10 lg:col-start-3 2xl:col-start-4 lg:justify-self-end 2xl:justify-self-start font-normal text-3xl sm:text-4xl xl:text-5xl text-balance">
             The tech space is so wide and there’s always something better to
             make and novel to discover. I would love to have a conversation and
             see how we can make it work
