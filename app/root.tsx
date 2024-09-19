@@ -1,3 +1,5 @@
+import type { LinksFunction } from "@remix-run/node";
+
 import { Github, Copyright } from "lucide-react";
 
 import { useEffect } from "react";
@@ -14,6 +16,31 @@ import {
 import { ArrowLink } from "./components/ArrowLink";
 
 import "./tailwind.css";
+
+export const links: LinksFunction = () => [
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/rethinksans-regular.ttf",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/rethinksans-medium.ttf",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/rethinksans-semibold.ttf",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/rethinksans-bold.ttf",
+  },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {

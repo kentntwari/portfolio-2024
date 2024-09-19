@@ -6,25 +6,65 @@
   @font-face {
     font-family: "Rethink Sans";
     font-weight: 400;
-    src: url("/public/fonts/RethinkSans-Regular.ttf") format("ttf");
+    src: url("/fonts/rethinksans-regular.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/rethinksans-italic.ttf") format("ttf");
   }
 
   @font-face {
     font-family: "Rethink Sans";
     font-weight: 500;
-    src: url("/public/fonts/RethinkSans-Medium.ttf") format("ttf");
+    src: url("/fonts/rethinksans-medium.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 500;
+    font-style: italic;
+    src: url("/fonts/rethinksans-mediumitalic.ttf") format("ttf");
   }
 
   @font-face {
     font-family: "Rethink Sans";
     font-weight: 600;
-    src: url("/public/fonts/RethinkSans-SemiBold.ttf") format("ttf");
+    src: url("/fonts/rethinksans-semibold.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 600;
+    font-style: italic;
+    src: url("/fonts/rethinksans-semibolditalic.ttf") format("ttf");
   }
 
   @font-face {
     font-family: "Rethink Sans";
     font-weight: 700;
-    src: url("/public/fonts/RethinkSans-Bold.ttf") format("ttf");
+    src: url("/fonts/rethinksans-bold.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/rethinksans-bolditalic.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 800;
+    src: url("/fonts/rethinksans-extrabold.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Rethink Sans";
+    font-weight: 800;
+    font-style: italic;
+    src: url("/fonts/rethinksans-extrabolditalic.ttf") format("ttf");
   }
 
   :root {
